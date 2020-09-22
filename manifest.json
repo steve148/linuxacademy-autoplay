@@ -1,0 +1,26 @@
+{
+    "name": "LinuxAcademy Auto Play and Complete",
+    "version": "0.1",
+    "description": "Chrome extension for marking a finished module as complete and starting the next video.",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": [
+                "https://linuxacademy.com/*/module/*"
+            ],
+            "run_at": "document_idle",
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "icons": {
+        "16": "images/icon.png",
+        "32": "images/icon.png",
+        "48": "images/icon.png",
+        "128": "images/icon.png"
+    },
+    "manifest_version": 2
+}
